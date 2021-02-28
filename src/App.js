@@ -20,7 +20,7 @@ function App() {
       </header>
        <div className="country-container">
        {
-         countries.map(country => <Country country={country}></Country>)
+         countries.map(country => <Country key={country.alpha3Code} country={country}></Country>)
        }
        </div>
     </div>
