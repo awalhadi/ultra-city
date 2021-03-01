@@ -3,6 +3,8 @@ import "./Country.css";
 
 const Country = (props) => {
     const {name, capital, population, languages, region, flag} = props.country;
+
+    const handleAddCountry = props.handleAddCountry;
     return (
         <div className="country">
             <div className="country-flag">
@@ -14,6 +16,7 @@ const Country = (props) => {
                 <p> Languages: {languages[0].name}</p>
                 <p>Population: {population}</p>
                 <p>Region: {region}</p>
+                <button onClick={() => handleAddCountry(props.country)}>Add Country</button>
             </div>
         </div>
     );
